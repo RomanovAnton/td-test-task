@@ -4,41 +4,44 @@
     <div class="param">
       <p class="param__title">Первоначальный взнос</p>
       <div class="param__values">
-        <span>{{ 160000 | cost }}</span>
-        <span>{{ 10 }}%</span>
+        <span>{{ (cost * percentCurrent) / 100 | cost }}</span>
+        <span>{{ percentCurrent }}%</span>
       </div>
       <app-slider
-        [minValue]="10"
-        [maxValue]="90"
-        [stepValue]="5"
-        [value]="20"
+        [minValue]="percentMin"
+        [maxValue]="percentMax"
+        [stepValue]="percentStep"
+        [value]="percentCurrent"
+        (valueChange)="updatePercent($event)"
         class="param__slider"
       ></app-slider>
     </div>
     <div class="param">
       <p class="param__title">Готов платить в месяц</p>
       <div class="param__values">
-        <span>до{{ 10000 | cost }}</span>
+        <span>до {{ paymentCurrent | cost }}</span>
       </div>
       <app-slider
-        [minValue]="10"
-        [maxValue]="90"
-        [stepValue]="5"
-        [value]="20"
+        [minValue]="paymentMin"
+        [maxValue]="paymentMax"
+        [stepValue]="paymentStep"
+        [value]="paymentCurrent"
+        (valueChange)="updatePayment($event)"
         class="param__slider"
       ></app-slider>
     </div>
     <div class="param">
       <p class="param__title">Срок кредита</p>
       <div class="param__values">
-        <span>12 месяцев</span>
-        <span>5 лет</span>
+        <span>{{ monthsCurrent | monthsForm }}</span>
+        <span>{{ monthsCurrent | monthToYear }}</span>
       </div>
       <app-slider
-        [minValue]="10"
-        [maxValue]="90"
-        [stepValue]="5"
-        [value]="20"
+        [minValue]="monthsMin"
+        [maxValue]="monthsMax"
+        [stepValue]="monthsStep"
+        [value]="monthsCurrent"
+        (valueChange)="updateMonths($event)"
         class="param__slider"
       ></app-slider>
     </div>
