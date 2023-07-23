@@ -18,14 +18,14 @@ export class CreditConfigComponent {
   percentMax = 50;
   percentStep = 5;
 
-  paymentCurrent = 21000;
-  paymentMin = 18000;
-  paymentMax = 22000;
+  paymentCurrent = 10000;
+  paymentMin = 10000;
+  paymentMax = 30000;
   paymentStep = 1000;
 
-  monthsCurrent = 24;
+  monthsCurrent = 252;
   monthsMin = 12;
-  monthsMax = 60;
+  monthsMax = 252;
   monthsStep = 12;
 
   constructor(private modal: NgbModal, private activeModal: NgbActiveModal) {}
