@@ -1,0 +1,11 @@
+<div class="app">
+  <ul class="app__list">
+    <li class="card" *ngFor="let item of list" (click)="handleCardClick(item)">
+      <div class="card__image">
+        <img [src]="item.image" alt="card-image" />
+      </div>
+      <p class="card__title">{{ item.title }}</p>
+      <p class="card__cost">от {{ item.cost | cost }}</p>
+    </li>
+  </ul>
+</div>
