@@ -1,3 +1,19 @@
-<div>
-  <h1>{{ carInfo.title }}</h1>
+<div class="modal-body">
+  <div class="modal__top">
+    <div class="modal__info">
+      <h2 class="modal__title">
+        Расчет кредита <span>{{ carInfo.title }}</span>
+      </h2>
+      <img
+        src="/assets/close-icon.svg"
+        alt="close-icon"
+        (click)="activeModal.dismiss()"
+        class="modal__close"
+        ngbAutofocus
+      />
+    </div>
+    <app-car-card [carInfo]="carInfo"></app-car-card>
+  </div>
+  <app-credit-config [cost]="carInfo.cost"></app-credit-config>
+  <app-questions></app-questions>
 </div>

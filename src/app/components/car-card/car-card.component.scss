@@ -1,0 +1,72 @@
+:host {
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &__image {
+    width: 250px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    margin-left: 30px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__params {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__param {
+    p:first-child {
+      color: #b4b2b2;
+      margin-bottom: 8px;
+    }
+
+    p:last-child {
+      color: #b4b2b2;
+      margin: 0;
+      font-size: 22px;
+      font-weight: 600;
+    }
+  }
+
+  &__cost {
+    margin-left: auto;
+
+    span {
+      color: #b4b2b2;
+    }
+
+    p {
+      font-size: 26px;
+      font-weight: 700;
+    }
+  }
+
+  &__sale {
+    width: 160px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #fa5f1a;
+    margin-bottom: 16px;
+  }
+}

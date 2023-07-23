@@ -1,0 +1,8 @@
+<input
+  type="range"
+  [min]="minValue"
+  [max]="maxValue"
+  [step]="stepValue"
+  [(ngModel)]="value"
+  (ngModelChange)="onRangeChange($event)"
+/>

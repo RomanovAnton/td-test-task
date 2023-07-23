@@ -1,0 +1,9 @@
+<button
+  class="button"
+  [ngClass]="{
+    filled: type === buttonType.FILLED,
+    outlined: type === buttonType.OUTLINED,
+  }"
+>
+  <ng-content></ng-content>
+</button>

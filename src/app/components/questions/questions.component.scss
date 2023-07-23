@@ -1,0 +1,29 @@
+.block {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+
+  &__icon {
+    width: 48px;
+  }
+
+  &__text {
+    margin-left: 25px;
+    font-size: 16px;
+    line-height: 28px;
+
+    p:first-child {
+      font-weight: 600;
+      margin: 0;
+    }
+
+    p:last-child {
+      color: #b4b2b2;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+    width: 25%;
+  }
+}

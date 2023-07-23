@@ -1,0 +1,34 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid #fa5f1a;
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 11px;
+  transition: 0.2s;
+}
+
+.filled {
+  background-color: #fa5f1a;
+  color: white;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.outlined {
+  background-color: transparent;
+  color: #fa5f1a;
+
+  &:hover {
+    background-color: #fa5f1a;
+    color: white;
+  }
+}

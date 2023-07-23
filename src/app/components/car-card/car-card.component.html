@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card__image"><img [src]="carInfo.image" alt="car-image" /></div>
+  <div class="card__info">
+    <h3 class="card__title">{{ carInfo.title }}</h3>
+    <div class="card__params">
+      <div class="card__param">
+        <p *ngFor="let item of carInfo.power">{{ item }}</p>
+      </div>
+      <div class="card__param">
+        <p *ngFor="let item of carInfo.drive">{{ item }}</p>
+      </div>
+      <div class="card__param">
+        <p *ngFor="let item of carInfo.transmission">{{ item }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card__cost">
+    <div class="card__sale">Скидка {{ 200000 | cost }}</div>
+    <span>Стоимость автомобиля</span>
+    <p>{{ carInfo.cost | cost }}</p>
+  </div>
+</div>

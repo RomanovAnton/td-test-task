@@ -1,0 +1,69 @@
+<div class="block">
+  <h3 class="block__title">{{ "Настройки кредита" | uppercase }}</h3>
+  <div class="block__params">
+    <div class="param">
+      <p class="param__title">Первоначальный взнос</p>
+      <div class="param__values">
+        <span>{{ 160000 | cost }}</span>
+        <span>{{ 10 }}%</span>
+      </div>
+      <app-slider
+        [minValue]="10"
+        [maxValue]="90"
+        [stepValue]="5"
+        [value]="20"
+        class="param__slider"
+      ></app-slider>
+    </div>
+    <div class="param">
+      <p class="param__title">Готов платить в месяц</p>
+      <div class="param__values">
+        <span>до{{ 10000 | cost }}</span>
+      </div>
+      <app-slider
+        [minValue]="10"
+        [maxValue]="90"
+        [stepValue]="5"
+        [value]="20"
+        class="param__slider"
+      ></app-slider>
+    </div>
+    <div class="param">
+      <p class="param__title">Срок кредита</p>
+      <div class="param__values">
+        <span>12 месяцев</span>
+        <span>5 лет</span>
+      </div>
+      <app-slider
+        [minValue]="10"
+        [maxValue]="90"
+        [stepValue]="5"
+        [value]="20"
+        class="param__slider"
+      ></app-slider>
+    </div>
+  </div>
+
+  <div class="programm">
+    <div class="programm__item">
+      <p>Сумма выплат</p>
+      <p>от {{ 141579 | cost }}</p>
+    </div>
+    <div class="programm__item">
+      <p>Процентная ставка</p>
+      <p>от 11,8%</p>
+    </div>
+    <div class="programm__item">
+      <p>Платеж в месяц</p>
+      <p>
+        <span>от {{ 8890 | cost }}/мес</span>
+      </p>
+    </div>
+    <app-button
+      class="programm__btn"
+      [type]="buttonType.FILLED"
+      (click)="handleSubmit()"
+      >Отправить заявку</app-button
+    >
+  </div>
+</div>

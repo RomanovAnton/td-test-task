@@ -1,0 +1,10 @@
+<div class="modal-body">
+  <img src="/assets/success-icon.svg" alt="success-icon" class="modal__image" />
+  <h3 class="modal__title">Ваша заявка отправлена!</h3>
+  <p class="modal__caption">
+    Спасибо за обращение! Мы свяжемся с вами в ближайшее время
+  </p>
+  <app-button [type]="buttonType.FILLED" (click)="modal.dismiss()"
+    >Вернуться в каталог</app-button
+  >
+</div>

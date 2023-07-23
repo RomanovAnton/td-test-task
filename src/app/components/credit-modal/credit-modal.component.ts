@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { CarInfo } from 'src/app/types/CarInfo';
 
 @Component({
@@ -8,4 +9,5 @@ import { CarInfo } from 'src/app/types/CarInfo';
 })
 export class CreditModalComponent {
   carInfo!: CarInfo;
+  constructor(public activeModal: NgbActiveModal) {}
 }
