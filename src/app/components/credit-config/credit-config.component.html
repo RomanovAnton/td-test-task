@@ -46,27 +46,9 @@
       ></app-slider>
     </div>
   </div>
-
-  <div class="programm">
-    <div class="programm__item">
-      <p>Сумма выплат</p>
-      <p>от {{ 141579 | cost }}</p>
-    </div>
-    <div class="programm__item">
-      <p>Процентная ставка</p>
-      <p>от 11,8%</p>
-    </div>
-    <div class="programm__item">
-      <p>Платеж в месяц</p>
-      <p>
-        <span>от {{ 8890 | cost }}/мес</span>
-      </p>
-    </div>
-    <app-button
-      class="programm__btn"
-      [type]="buttonType.FILLED"
-      (click)="handleSubmit()"
-      >Отправить заявку</app-button
-    >
-  </div>
+  <app-credit-program
+    [percent]="percentCurrent"
+    [payment]="paymentCurrent"
+    [months]="monthsCurrent"
+  ></app-credit-program>
 </div>

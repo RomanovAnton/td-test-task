@@ -1,7 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Button } from 'src/app/enum/Button';
-import { SuccessModalComponent } from '../success-modal/success-modal.component';
 
 @Component({
   selector: 'app-credit-config',
@@ -10,8 +7,6 @@ import { SuccessModalComponent } from '../success-modal/success-modal.component'
 })
 export class CreditConfigComponent {
   @Input() cost!: number;
-
-  buttonType = Button;
 
   percentCurrent = 20;
   percentMin = 10;
@@ -27,8 +22,6 @@ export class CreditConfigComponent {
   monthsMin = 12;
   monthsMax = 252;
   monthsStep = 12;
-
-  constructor(private modal: NgbModal, private activeModal: NgbActiveModal) {}
 
   updatePercent(value: number) {
     this.percentCurrent = value;
@@ -52,10 +45,5 @@ export class CreditConfigComponent {
     const changedPart = (this.monthsCurrent - value) / this.monthsStep;
     this.paymentCurrent = this.paymentCurrent + changedPart * this.paymentStep;
     this.monthsCurrent = value;
-  }
-
-  handleSubmit(): void {
-    this.activeModal.dismiss();
-    this.modal.open(SuccessModalComponent, { size: 'm' });
   }
 }

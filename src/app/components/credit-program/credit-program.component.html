@@ -1,0 +1,22 @@
+<div class="program">
+  <div class="program__item">
+    <p>Сумма выплат</p>
+    <p>от {{ 141579 | cost }}</p>
+  </div>
+  <div class="program__item">
+    <p>Процентная ставка</p>
+    <p>от {{ currentProgram.percent }}%</p>
+  </div>
+  <div class="program__item">
+    <p>Платеж в месяц</p>
+    <p>
+      <span>от {{ currentProgram.payment | cost }}/мес</span>
+    </p>
+  </div>
+  <app-button
+    class="program__btn"
+    [type]="buttonType.FILLED"
+    (click)="handleSubmit()"
+    >Отправить заявку</app-button
+  >
+</div>

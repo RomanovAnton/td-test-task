@@ -7,6 +7,7 @@ import { CarCardComponent } from './car-card/car-card.component';
 import { PipesModule } from '../pipes/pipes.module';
 import { WidgetsModule } from '../widgets/widgets.module';
 import { SuccessModalComponent } from './success-modal/success-modal.component';
+import { CreditProgramComponent } from './credit-program/credit-program.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SuccessModalComponent } from './success-modal/success-modal.component';
     QuestionsComponent,
     CarCardComponent,
     SuccessModalComponent,
+    CreditProgramComponent,
   ],
   imports: [CommonModule, PipesModule, WidgetsModule],
 })

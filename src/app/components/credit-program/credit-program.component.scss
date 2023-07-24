@@ -1,0 +1,33 @@
+.program {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 35px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 175px;
+
+    p:first-child {
+      font-size: 16px;
+      line-height: 24px;
+      color: #b4b2b2;
+      margin-bottom: 5px;
+    }
+
+    p:last-child {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__btn {
+    width: 25%;
+  }
+}
